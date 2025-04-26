@@ -1,2 +1,3 @@
-# what-day-is-it
-It just says what day is today
+# What day is it?
+
+Today is: *pending...*
