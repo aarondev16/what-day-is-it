@@ -17,7 +17,7 @@ jobs:
 
       - name: Update README with today's date
         run: |
-          DATE=$(date -u +"%A, %B %d, %Y")
+          DATE=$(TZ=America/Mexico_City date +"%A, %B %d, %Y")
           echo -e "# What day is it?\n\nToday is: *$DATE*" > README.md
 
       - name: Commit and push changes
