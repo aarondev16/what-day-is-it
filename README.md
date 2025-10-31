@@ -1,3 +1,3 @@
 # What day is it?
 
-Today is: *Thursday, October 30, 2025* :)
+Today is: *Friday, October 31, 2025* :)
