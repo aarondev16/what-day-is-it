@@ -1,3 +1,3 @@
 # What day is it?
 
-Today is: *Monday, November 24, 2025* :)
+Today is: *Tuesday, November 25, 2025* :)
