@@ -1,27 +1,27 @@
-name: Daily Date Update
-on:
-  schedule:
-    - cron: '0 6 * * *' # Runs every day at 12:00 AM Mexico City time (UTC-6)
-  workflow_dispatch:
-permissions:
-  contents: write 
-jobs:
-  update-date:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Update README with today's date
-        run: |
-          # Obtener la fecha actual en la zona horaria de México
-          DATE=$(TZ=America/Mexico_City date +"%A, %B %d, %Y")
-          echo -e "# What day is it?\n\nToday is: *$DATE* :)" > README.md
-      - name: Commit and push changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config user.name "aarondev16"
-          git config user.email "aaronoso0704@gmail.com"
-          git add README.md
-          git commit -m "📅 Updated: $(TZ=America/Mexico_City date +"%A, %B %d, %Y")"
-          git push
+# name: Daily Date Update
+# on:
+#   schedule:
+#     - cron: '0 6 * * *' # Runs every day at 12:00 AM Mexico City time (UTC-6)
+#   workflow_dispatch:
+# permissions:
+#   contents: write 
+# jobs:
+#   update-date:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+#       - name: Update README with today's date
+#         run: |
+#           # Obtener la fecha actual en la zona horaria de México
+#           DATE=$(TZ=America/Mexico_City date +"%A, %B %d, %Y")
+#           echo -e "# What day is it?\n\nToday is: *$DATE* :)" > README.md
+#       - name: Commit and push changes
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         run: |
+#           git config user.name "aarondev16"
+#           git config user.email "aaronoso0704@gmail.com"
+#           git add README.md
+#           git commit -m "📅 Updated: $(TZ=America/Mexico_City date +"%A, %B %d, %Y")"
+#           git push
